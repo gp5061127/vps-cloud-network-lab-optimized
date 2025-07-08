@@ -1,7 +1,3 @@
-VPS 云网络实验室优化项目 🌐⚡
-专为高性能 VPS 环境优化的网络配置与实验室工具集
-
-markdown
 # VPS 云网络实验室优化项目 🌐⚡
 
 > 专为高性能 VPS 环境优化的网络配置与实验室工具集
@@ -10,37 +6,6 @@ markdown
 [![GitHub Stars](https://img.shields.io/github/stars/gp5061127/vps-cloud-network-lab-optimized)](https://github.com/gp5061127/vps-cloud-network-lab-optimized/stargazers)
 [![Open Issues](https://img.shields.io/github/issues/gp5061127/vps-cloud-network-lab-optimized)](https://github.com/gp5061127/vps-cloud-network-lab-optimized/issues)
 [![Last Commit](https://img.shields.io/github/last-commit/gp5061127/vps-cloud-network-lab-optimized)](https://github.com/gp5061127/vps-cloud-network-lab-optimized/commits/main)
-
-```mermaid
-graph LR
-    A[用户VPS] --> B(网络优化)
-    A --> C(安全防护)
-    A --> D(监控诊断)
-    A --> E(网络实验室)
-    B --> F[TCP/UDP加速]
-    B --> G[BBR增强]
-    C --> H[智能防火墙]
-    C --> I[入侵检测]
-    D --> J[实时监控]
-    D --> K[诊断报告]
-    E --> L[网络模拟]
-    E --> M[协议分析]
-目录 📚
-项目介绍
-
-核心功能
-
-安装指南
-
-使用教程
-
-配置选项
-
-性能优化
-
-贡献指南
-
-许可证
 
 项目介绍 🚀
 VPS 云网络实验室优化项目是一套专为 VPS 环境设计的网络性能优化工具集，提供：
