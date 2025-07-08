@@ -226,9 +226,5 @@ MIT License
 Copyright (c) 2023 VPS Cloud Network Lab Team
 
 Permission is hereby granted, free of charge, to any person obtaining a copy...
-🚀 立即体验 VPS 网络优化：
-https://img.shields.io/badge/%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC-brightgreen?style=for-the-badge&logo=github
-https://img.shields.io/badge/%E6%9F%A5%E7%9C%8B-%E5%AE%8C%E6%95%B4%E6%96%87%E6%A1%A3-blue?style=for-the-badge&logo=readthedocs
-
-📮 问题反馈：
-创建 Issue | 讨论区
+📮 问题与反馈
+如果你在使用过程中遇到任何问题，欢迎在 Issues 页面提交问题，或者通过 Telegram 联系我：@duncesuoshuqu。我会尽快响应并帮助解决问题。
