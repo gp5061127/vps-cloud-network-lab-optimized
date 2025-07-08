@@ -14,3 +14,10 @@
 git clone https://github.com/gp5061127/vps-cloud-network-lab.git
 cd vps-cloud-network-lab/scripts
 ./install.sh --wizard
+## 高级用法
+- 自定义配置生成：`./scripts/config-manager --protocol hysteria --set port=443`
+- 网络诊断：`./tools/diagnose.sh --test latency`
+- 性能优化：`./tools/optimizer.sh`
+
+## 贡献指南
+欢迎提交Issue和Pull Request！

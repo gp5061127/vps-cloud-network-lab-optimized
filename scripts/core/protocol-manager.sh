@@ -1,21 +1,39 @@
 #!/bin/bash
-# 网络优化配置
+# 协议智能选择器
 
-function apply_network_optimizations() {
-    log "应用网络优化参数..."
+function select_protocol() {
+    local network_env=$1
+    
+    case "$network_env" in
+        high-loss)
+            echo "hysteria"  # 高丢包环境
+            ;;
+        censored)
+            echo "reality"   # 审查严格地区
+            ;;
+        gaming)
+            echo "tuic"      # 游戏加速
+            ;;
+        *)
+            echo "xray"      # 普通环境
+            ;;
+    esac
+}
 
-    # 启用BBR
-    if ! sysctl net.ipv4.tcp_congestion_control | grep -q bbr; then
-        echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
-        echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
-        sysctl -p
-    fi
-
-    # 优化TCP参数
-    sysctl -w net.ipv4.tcp_fastopen=3
-    sysctl -w net.ipv4.tcp_syn_retries=3
-    sysctl -w net.ipv4.tcp_fin_timeout=30
-    sysctl -w net.ipv4.tcp_keepalive_time=1200
-
-    log "网络优化完成"
+function configure_protocol() {
+    local protocol=$1
+    local config_file="$2"
+    
+    case "$protocol" in
+        hysteria)
+            # 应用Hysteria优化参数
+            jq '. += {"obfs": "secure", "alpn": "h3"}' "$config_file" > tmp.json
+            mv tmp.json "$config_file"
+            ;;
+        reality)
+            # 应用Reality配置
+            jq '.inbounds[0].settings.reality = {"shortIds": ["abcd"], "dest": "example.com"}' "$config_file" > tmp.json
+            mv tmp.json "$config_file"
+            ;;
+    esac
 }
