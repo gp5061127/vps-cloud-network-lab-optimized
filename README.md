@@ -226,5 +226,5 @@ MIT License
 Copyright (c) 2023 VPS Cloud Network Lab Team
 
 Permission is hereby granted, free of charge, to any person obtaining a copy...
-#📮 问题与反馈
+# 问题与反馈
 如果你在使用过程中遇到任何问题，欢迎在 Issues 页面提交问题，或者通过 Telegram 联系我：@duncesuoshuqu。我会尽快响应并帮助解决问题。
