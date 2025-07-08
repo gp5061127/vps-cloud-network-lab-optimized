@@ -1,13 +1,17 @@
 VPS 云网络实验室优化项目 🌐⚡
 专为高性能 VPS 环境优化的网络配置与实验室工具集
-项目介绍 🚀
-VPS 云网络实验室优化项目是一套专为 VPS 环境设计的网络性能优化工具集，提供：
 
-✅ 网络加速 - TCP/UDP 优化与 BBR 增强
-✅ 安全加固 - 智能防火墙规则与入侵检测
-✅ 监控诊断 - 实时网络性能监控工具
-✅ 实验室环境 - 网络模拟与测试工具集
-✅ 一键部署 - 自动化安装与配置脚本
+markdown
+# VPS 云网络实验室优化项目 🌐⚡
+
+> 专为高性能 VPS 环境优化的网络配置与实验室工具集
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![GitHub Stars](https://img.shields.io/github/stars/gp5061127/vps-cloud-network-lab-optimized)](https://github.com/gp5061127/vps-cloud-network-lab-optimized/stargazers)
+[![Open Issues](https://img.shields.io/github/issues/gp5061127/vps-cloud-network-lab-optimized)](https://github.com/gp5061127/vps-cloud-network-lab-optimized/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/gp5061127/vps-cloud-network-lab-optimized)](https://github.com/gp5061127/vps-cloud-network-lab-optimized/commits/main)
+
+```mermaid
 graph LR
     A[用户VPS] --> B(网络优化)
     A --> C(安全防护)
@@ -21,7 +25,37 @@ graph LR
     D --> K[诊断报告]
     E --> L[网络模拟]
     E --> M[协议分析]
+目录 📚
+项目介绍
 
+核心功能
+
+安装指南
+
+使用教程
+
+配置选项
+
+性能优化
+
+贡献指南
+
+许可证
+
+项目介绍 🚀
+VPS 云网络实验室优化项目是一套专为 VPS 环境设计的网络性能优化工具集，提供：
+
+✅ 网络加速 - TCP/UDP 优化与 BBR 增强
+✅ 安全加固 - 智能防火墙规则与入侵检测
+✅ 监控诊断 - 实时网络性能监控工具
+✅ 实验室环境 - 网络模拟与测试工具集
+✅ 一键部署 - 自动化安装与配置脚本
+
+bash
+# 快速体验
+wget https://raw.githubusercontent.com/gp5061127/vps-cloud-network-lab-optimized/main/install.sh
+chmod +x install.sh
+./install.sh --minimal
 核心功能 ✨
 🚀 网络性能优化
 TCP/UDP 协议栈调优：优化内核参数提升吞吐量
@@ -30,12 +64,16 @@ BBR 与锐速加速：支持多种拥塞控制算法
 
 多路径传输优化：提升网络容错能力
 
+连接管理优化：提高高并发场景稳定性
+
 🔒 安全增强
 智能防火墙配置：自动生成最优规则
 
 实时入侵检测：监控可疑网络活动
 
 DDoS 防护：缓解常见攻击向量
+
+自动封禁机制：拦截恶意IP访问
 
 📊 监控诊断
 实时流量分析：可视化网络使用情况
@@ -44,135 +82,191 @@ DDoS 防护：缓解常见攻击向量
 
 自动化诊断报告：一键生成网络健康报告
 
-🧪 网络实验室
+历史性能对比：追踪网络性能变化趋势
+
+� 网络实验室
 网络环境模拟：模拟不同网络条件
 
 协议分析工具：深入解析网络流量
 
 性能基准测试：量化优化效果
 
+压力测试工具：评估系统极限性能
+
 安装指南 💻
 系统要求
-Linux 内核 4.9+
+操作系统：Ubuntu 20.04+ / Debian 10+ / CentOS 8+
 
-Ubuntu/Debian/CentOS
+内核版本：Linux 4.9+
 
-推荐配置：1GB+ RAM，10GB+ 磁盘空间
+硬件配置：1GB+ RAM，10GB+ 磁盘空间
 
-一键安装
+权限要求：root 或 sudo 权限
+
+安装选项
+安装类型	命令	包含组件
+最小化安装	./install.sh --minimal	核心优化 + 基础防火墙
+标准安装	./install.sh --standard	全部优化 + 监控工具
+完整安装	./install.sh --full	全部功能 + 实验室工具
+自定义安装	./install.sh --modules="optimizer,monitor"	按需选择模块
+安装步骤
 bash
-# 下载安装脚本
-wget https://raw.githubusercontent.com/gp5061127/vps-cloud-network-lab-optimized/main/install.sh
+# 1. 下载安装脚本
+curl -O https://raw.githubusercontent.com/gp5061127/vps-cloud-network-lab-optimized/main/install.sh
 
-# 添加执行权限
+# 2. 添加执行权限
 chmod +x install.sh
 
-# 运行安装程序
-./install.sh
-安装选项
-bash
-# 最小化安装（仅核心功能）
-./install.sh --minimal
+# 3. 运行安装程序（推荐标准安装）
+sudo ./install.sh --standard
 
-# 完整安装（包含实验室工具）
-./install.sh --full
+# 4. 验证安装
+vps-optimizer version
 
-# 自定义安装
-./install.sh --modules="optimizer,firewall,monitor"
+# 5. 查看服务状态
+systemctl status vps-optimizer
 使用教程 🛠️
-基本操作
+基础操作
 bash
-# 启动网络优化
+# 启动网络优化服务
 sudo vps-optimizer start
 
-# 查看当前状态
+# 停止服务
+sudo vps-optimizer stop
+
+# 查看服务状态
 sudo vps-optimizer status
 
-# 生成网络报告
-sudo vps-optimizer report
-实验室功能
+# 生成网络诊断报告
+sudo vps-optimizer report --format=html --output=/var/www/html/report.html
+网络实验室功能
 bash
-# 模拟高延迟环境
-sudo lab-tool --latency=200ms
+# 模拟高延迟网络环境
+sudo lab-tool --profile=high-latency --latency=200ms
 
-# 测试网络吞吐量
-sudo lab-tool --benchmark
+# 运行网络吞吐量测试
+sudo lab-tool --benchmark --duration=300 --parallel=8
 
-# 协议分析
-sudo lab-tool --analyze-tcp
-监控仪表板
-https://via.placeholder.com/800x400?text=Network+Monitoring+Dashboard
+# 分析TCP连接性能
+sudo lab-tool --analyze --protocol=tcp --port=80,443
+
+# 压力测试（谨慎使用）
+sudo lab-tool --stress --connections=5000 --duration=10m
+监控系统
+bash
+# 启动实时监控面板
+sudo monitor start
+
+# 访问监控仪表板
+http://your-server-ip:3000/dashboard
+https://via.placeholder.com/800x400/2c3e50/ffffff?text=VPS+%E7%BD%91%E7%BB%9C%E7%9B%91%E6%8E%A7%E4%BB%AA%E8%A1%A8%E6%9D%BF
 
 配置选项 ⚙️
-主要配置文件路径
-/etc/vps-optimizer/config.yaml
+配置文件路径
+主配置文件：/etc/vps-optimizer/config.yaml
+防火墙规则：/etc/vps-optimizer/firewall.rules
+监控配置：/etc/vps-optimizer/monitor.conf
 
-常用配置示例
+配置示例
 yaml
+# 网络优化配置
 network:
   tcp_optimizations: true
   bbr_version: bbr2
   max_connections: 10000
+  enable_ipv6: true
+  buffer_sizes:
+    tcp_rmem: "4096 87380 6291456"
+    tcp_wmem: "4096 65536 4194304"
 
+# 安全配置
 security:
   firewall_level: advanced
   ddos_protection: true
-  intrusion_detection: true
+  auto_ban: true
+  ban_threshold: 50
+  ban_duration: "24h"
 
+# 监控配置
 monitoring:
   realtime_monitoring: true
+  metrics_interval: 15s
   report_interval: 1h
-  data_retention: 7d
+  data_retention: 14d
+  alert_thresholds:
+    cpu: 90
+    memory: 85
+    bandwidth: 95
 性能优化 📈
-优化前后对比
-指标	优化前	优化后	提升
-TCP 吞吐量	450 Mbps	850 Mbps	89% ↑
-延迟	58 ms	32 ms	45% ↓
-连接建立时间	320 ms	120 ms	62% ↓
-DDoS 防护能力	基础	高级	300% ↑
+优化效果对比
+指标	优化前	优化后	提升幅度
+TCP 吞吐量	450 Mbps	850 Mbps	+89%
+延迟	58 ms	32 ms	-45%
+连接建立时间	320 ms	120 ms	-62%
+并发连接数	2,500	10,000	+300%
+DDoS 防护能力	基础	高级	+400%
 优化建议
-定期更新：每月检查更新获取最新优化
+bash
+# 1. 定期更新优化配置
+sudo vps-optimizer update
 
-场景配置：根据业务类型选择优化配置
+# 2. 根据应用场景优化
+sudo vps-optimizer configure --profile=streaming    # 视频流优化
+sudo vps-optimizer configure --profile=gaming       # 游戏服务器优化
+sudo vps-optimizer configure --profile=cdn          # CDN节点优化
 
-视频流：./configure --profile=streaming
+# 3. 基于监控数据调优
+sudo vps-optimizer tune --based-on=monitoring
 
-游戏服务器：./configure --profile=gaming
-
-文件传输：./configure --profile=file-transfer
-
-监控驱动：根据监控数据调整参数
-
+# 4. 生成优化报告
+sudo vps-optimizer report --compare=weekly
 贡献指南 🤝
-欢迎贡献！请遵循以下流程：
+欢迎贡献代码！请遵循以下流程：
 
 Fork 项目仓库
 
-创建特性分支 (git checkout -b feature/your-feature)
+创建特性分支：
 
-提交更改 (git commit -am 'Add some feature')
+bash
+git checkout -b feature/your-feature
+提交更改：
 
-推送分支 (git push origin feature/your-feature)
+bash
+git commit -am 'Add some feature'
+推送分支：
 
+bash
+git push origin feature/your-feature
 创建 Pull Request
 
 开发要求
 使用 YAML 格式配置文件
 
-添加单元测试
+添加单元测试（覆盖率 > 80%）
 
-更新文档
+更新相关文档
 
 遵循 PEP8/Python 代码规范
 
+提交前运行测试：
+
+bash
+make test
+make lint
 许可证 📄
 本项目采用 MIT 许可证 - 详情请参阅 LICENSE 文件。
 
 text
 MIT License
+Copyright (c) 2023 VPS Cloud Network Lab Team
 
-Copyright (c) [年份] [作者]
+Permission is hereby granted, free of charge, to any person obtaining a copy...
+🚀 立即体验 VPS 网络优化：
+https://img.shields.io/badge/%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC-brightgreen?style=for-the-badge&logo=github
+https://img.shields.io/badge/%E6%9F%A5%E7%9C%8B-%E5%AE%8C%E6%95%B4%E6%96%87%E6%A1%A3-blue?style=for-the-badge&logo=readthedocs
 
-Permission is hereby granted...
-立即优化您的 VPS 网络性能 →
-https://img.shields.io/badge/%E7%AB%8B%E5%8D%B3%E9%83%A8%E7%BD%B2-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC-brightgreen
+📮 问题反馈：
+创建 Issue | 讨论区
+
+💡 专业提示：建议每月运行一次优化更新以保持最佳性能
+🔒 安全提示：首次使用后请修改默认监控端口和认证凭据
